@@ -1,88 +1,53 @@
 # NLP Challenge: Twitter Sentiment Analysis
 
-In this challenge, you will work on analyzing sentiment in tweets from the Sentiment140 dataset, which contains 1.6 million tweets. You will clean the data, extract features from the text, train a sentiment analysis model, and visualize sentiment regarding an AI company or product of your choice.
+In this project, I engaged in analyzing sentiment in tweets using the Sentiment140 dataset, which consists of 1.6 million tweets. I undertook the tasks of cleaning the data, extracting features from the text, training a sentiment analysis model, and visualizing sentiments regarding an AI company of my choice, specifically Microsoft.
 
-## Challenge Overview
+## Project Overview
 
-1\. **Dataset**: Download the Sentiment140 dataset from Kaggle [here](https://www.kaggle.com/datasets/kazanova/sentiment140). This dataset contains labeled tweets with sentiments (positive or negative).
+### 1. Dataset
+I downloaded the Sentiment140 dataset from Kaggle [here](https://www.kaggle.com/datasets/kazanova/sentiment140). This dataset includes labeled tweets with sentiments categorized as positive or negative.
 
-2\. **Data Preprocessing**:
+### 2. Data Preprocessing
 
-   - Read the dataset into a Pandas DataFrame.
+- I loaded the dataset into a Pandas DataFrame.
+- I cleaned the text data by removing special characters, handling missing values, and applying stemming and lemmatization techniques. I made a point not to use every single tweet in the provided dataset, focusing instead on a manageable subset for effective processing.
 
-   - Clean the text data as you see fit (e.g., removing special characters, handling missing values, stemming, or lemmatization). **NOTE**: you do NOT need to use every single tweet in the provided dataset.
+### 3. Feature Extraction
 
-3\. **Feature Extraction**:
+- For feature extraction from the text data, I opted to use:
+  - TF-IDF (Term Frequency-Inverse Document Frequency) to transform the text into a meaningful representation of numbers which the model can understand.
+  - I also considered other methods like word embeddings, but TF-IDF was sufficient for the initial stages of my analysis.
 
-   - Extract features from the text data. You can choose from various techniques such as:
+### 4. Model Selection and Training
 
-     - TF-IDF (Term Frequency-Inverse Document Frequency).
+- I chose Logistic Regression as the primary model for this analysis due to its effectiveness in binary classification tasks.
+- I split the data into training and testing sets.
+- The model was then trained on the training data.
 
-     - Word embeddings using Gensim or other word embedding models.
+### 5. Sentiment Analysis
 
-     - Any other feature extraction method you find suitable.
+- After training the model, I performed sentiment analysis specifically focusing on tweets mentioning Microsoft, filtering out approximately 500 tweets related to this AI-involved company.
+- I then repeated the sentiment analysis using the same machine learning model.
 
-4\. **Model Selection and Training**:
+### 6. Visualizations of Sentiment for Microsoft
 
-   - Choose a machine learning model of your preference (e.g., Logistic Regression, Random Forest, Support Vector Machine, XGBoost etc.).
+- I used the trained model to predict sentiment on tweets related to Microsoft.
+- I created various visualizations including heatmaps, bar charts, and word clouds to showcase how Twitter users feel about Microsoft.
 
-   - Split your data into training and testing sets.
+## Submission Components
 
-   - Train your model on the training data.
+Included in my submission are:
+- The code for data preprocessing, feature extraction, model training, and sentiment analysis.
+- Visualizations concerning the sentiment related to Microsoft.
+- A brief summary of my approach and results which highlights the accuracy score, confusion matrix, classification report, and the visualizations I generated.
 
-   - Evaluate the model's performance using accuracy metrics.
+## Evaluation and Adjustments
 
-5\. **Sentiment Analysis**:
+- I evaluated the model's performance using accuracy metrics and adjusted parameters using tools like pipeline configurations and GridSearchCV for optimization.
 
-   - After training your model, perform sentiment analysis on the dataset. You can choose to focus on binary sentiment (positive/negative) or include a neutral category.
+## Conclusion
 
-6\. **Visualizations on the Sentiment of an AI Company**:
-
-   - Select an AI company or product of your choice. Search for tweets mentioning your choice in the 1.6 million tweet dataset (Make sure your selection has at least ~100 tweets)
-
-   - Use your trained model to predict sentiment on tweets related to the chosen company or product.
-
-   - Create visualizations (e.g., bar charts, word clouds, sentiment distribution plots) to showcase how people on Twitter feel about the selected company or product.
-
-## Submission Guidelines
-
-- Create a Jupyter Notebook or Python script to document your work.
-
-- Include comments and explanations for each step of your code.
-
-- Provide clear visualizations with appropriate labels and titles.
-
-- You can use libraries like Matplotlib, Seaborn, or Plotly for your visualizations.
-
-- Your final submission should include:
-
-  - Code for data preprocessing, feature extraction, model training, and sentiment analysis.
-
-  - Visualizations related to the chosen AI company or product sentiment.
-
-  - A brief summary of your approach and results.
-
-## Evaluation
-
-You will be evaluated based on the following criteria:
-
-- Data preprocessing and cleaning.
-
-- Feature extraction method and rationale.
-
-- Model selection, training, and evaluation.
-
-- Accuracy and performance of sentiment analysis.
-
-- Quality and clarity of visualizations.
-
-- Code readability and documentation.
-
-## Tips
-
-- Experiment with different preprocessing techniques and feature extraction methods to improve your model's performance.
-
-- Explore various machine learning algorithms to find the best one for sentiment analysis.
+This project allowed me to thoroughly explore the use of NLP in sentiment analysis on Twitter data, focusing on a specific AI company. The insights gained through this project were substantiated by the quantitative outputs from the model and the qualitative assessments from the visual data representations.
 
 - Use cross-validation to fine-tune your model's hyperparameters.
 
