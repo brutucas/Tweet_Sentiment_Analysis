@@ -48,9 +48,3 @@ Included in my submission are:
 ## Conclusion
 
 This project allowed me to thoroughly explore the use of NLP in sentiment analysis on Twitter data, focusing on a specific AI company. The insights gained through this project were substantiated by the quantitative outputs from the model and the qualitative assessments from the visual data representations.
-
-- Use cross-validation to fine-tune your model's hyperparameters.
-
-- Pay attention to class imbalance if you choose binary sentiment analysis (positive/negative).
-
-Good luck with the NLP Challenge, and enjoy exploring sentiment analysis on Twitter data!
